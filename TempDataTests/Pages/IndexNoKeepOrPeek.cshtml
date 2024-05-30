@@ -1,0 +1,12 @@
+﻿@page
+@model TempDataTests.Pages.IndexNoKeepOrPeekModel
+@{
+}
+<h1>Index no Keep or Peek</h1>
+
+@{
+    if (TempData["Message"] != null)
+    {
+        <h3>Message: @TempData["Message"]</h3>
+    }
+}

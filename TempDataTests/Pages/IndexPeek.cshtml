@@ -1,0 +1,12 @@
+﻿@page
+@model TempDataTests.Pages.IndexPeekModel
+@{
+}
+<h1>Peek Contacts</h1>
+
+@{
+    if (TempData.Peek("Message") != null)
+    {
+        <h3>Message: @TempData.Peek("Message")</h3>
+    }
+}

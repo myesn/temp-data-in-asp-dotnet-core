@@ -1,0 +1,14 @@
+﻿@page
+@model TempDataTests.Pages.IndexKeepModel
+@{
+}
+<h1>Contacts Keep</h1>
+
+@{
+    // 和 IndexPeek 一样，只是换了一种方式，使用 `Keep` 在请求后保留数据
+    if (TempData["Message"] != null)
+    {
+        <h3>Message: @TempData["Message"]</h3>
+    }
+    TempData.Keep("Message");
+}
